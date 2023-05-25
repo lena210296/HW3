@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tracks</title>
+</head>
+<body>
+  <h1>Tracks</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Length (seconds)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for track in tracks %}
+      <tr>
+        <td>{{ track.title }}</td>
+        <td>{{ track.length_sec }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+PRAGMA foreign_keys = ON;
+
+DROP TABLE IF EXISTS tracks;
+DROP TABLE IF EXISTS genres;
+
+CREATE TABLE genres (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL
+);
+
+CREATE TABLE tracks (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  artist TEXT NOT NULL,
+  genre_id INT NOT NULL,
+  length DECIMAL NOT NULL,
+  FOREIGN KEY (genre_id) REFERENCES genres(id)
+);
